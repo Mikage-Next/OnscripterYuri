@@ -41,7 +41,7 @@ add_library(SDL3::Headers INTERFACE IMPORTED)
 set_target_properties(SDL3::Headers PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${MIKAGE_SDL3_INCLUDE}")
 
 # Dependencies, pinned. sdl2-compat comes from Mikage's fork, which adds iOS
-# support (branch shared-sdl3/ons). The SDL satellite libraries use only
+# support (branch mikage). The SDL satellite libraries use only
 # their bundled codecs, so nothing else has to be built for iOS.
 include(FetchContent)
 # SDL_ttf's vendored FreeType still asks for CMake 2.8, which CMake 4
@@ -49,7 +49,7 @@ include(FetchContent)
 set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
 FetchContent_Declare(sdl2_compat
     GIT_REPOSITORY https://github.com/itsCheney/sdl2-compat.git
-    GIT_TAG d02db3d9f09ef18f0adb05981ebd1760b9454bf1)
+    GIT_TAG c77e1e0e27a25b01d8137959fd58a1852bd1cacd)
 FetchContent_Declare(sdl2_image
     GIT_REPOSITORY https://github.com/libsdl-org/SDL_image.git
     GIT_TAG 12cb2e40330d256d9b1329647be8f366546d715c # release-2.8.12
