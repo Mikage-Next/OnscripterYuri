@@ -48,7 +48,7 @@ include(FetchContent)
 # refuses without this.
 set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
 FetchContent_Declare(sdl2_compat
-    GIT_REPOSITORY https://github.com/itsCheney/sdl2-compat.git
+    GIT_REPOSITORY https://github.com/Mikage-Next/sdl2-compat.git
     GIT_TAG c77e1e0e27a25b01d8137959fd58a1852bd1cacd)
 FetchContent_Declare(sdl2_image
     GIT_REPOSITORY https://github.com/libsdl-org/SDL_image.git
